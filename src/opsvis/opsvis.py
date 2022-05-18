@@ -5779,7 +5779,7 @@ def max_u_abs_from_beam_defo_interp_2d(nep):
     max_u_abs = 0.0
 
     ele_tags = ops.getEleTags()
-    print(f'ele_tags:\n{ele_tags}')
+    # print(f'ele_tags:\n{ele_tags}')
 
     for i, ele_tag in enumerate(ele_tags):
         ele_classtag = ops.getEleClassTags(ele_tag)[0]
@@ -5812,13 +5812,13 @@ def max_u_abs_from_beam_defo_interp_2d(nep):
             N_t = beam_transverse_shape_functions(L, nep)
 
             u_tc = N_t @ np.array([u_l[1], u_l[2], u_l[4], u_l[5]])
-            print(f'u_tc:\n{u_tc}')
+            # print(f'u_tc:\n{u_tc}')
 
             max_u_tc = max(np.abs(u_tc))
-            print(f'max_u_tc:\n{max_u_tc}')
+            # print(f'max_u_tc:\n{max_u_tc}')
 
             max_u_abs = max(max_u_abs, np.abs(max_u_tc))
-            print(f'max_u_abs:{max_u_abs}')
+            # print(f'max_u_abs:{max_u_abs}')
 
     return max_u_abs
 
