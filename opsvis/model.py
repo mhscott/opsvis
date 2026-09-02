@@ -962,8 +962,7 @@ def _plot_model_3d(node_labels, element_labels, offset_nd_label,
             #                 ops.nodeCoord(node_tag)[2]+_offset,
             #                 f'{node_tag}', va='bottom', ha='left', color='blue')
 
-        elif (ele_classtag == EleClassTag.ShellNLDKGT or
-              ele_classtag == EleClassTag.ShellDKGT):
+        elif (ele_classtag in [EleClassTag.ShellNLDKGT, EleClassTag.ShellDKGT, EleClassTag.ASDShellT3]):
             
             nen = 3
             nodes_geo_order = [0, 1, 2, 0]
